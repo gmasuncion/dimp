@@ -1,10 +1,10 @@
 Package: dimp
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Multiple Imputation and Deletion
 Version: 0.1.0
-Author: Who wrote it
+Author: Mark Asuncion, Luke Bai, Ting Lin, John Fei, Jason Dang
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Description: <TODO>
     Use four spaces when indenting paragraphs within the Description.
 License: MIT + file LICENSE
 Encoding: UTF-8
