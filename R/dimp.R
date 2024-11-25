@@ -9,19 +9,22 @@
 #'<TODO>
 #' @export
 
-dimp <- function(original_data, mice_obj, y){
-
+dimp <- function(mice_obj, y){
+  original_data <- complete(mice_obj, action = 0)
   # Identify the indices of missing values in the original data for variable y
-  missing_y_indices <- which(is.na(original_data[[y]]))
+  missing_y_indices <- is.na(original_data[[y]])
 
-  # Retrieve the imputed datasets
-  imputed_datasets <- complete(mice_obj, action = 'all')  # List of imputed datasets
+  # Retrieve the imputed datasets in long format
+  imputed_dataset <- complete(mice_obj, action = 'long', include=FALSE)
 
   # Delete (set to NA) the values in the variable y where they were originally missing
-  deleted_datasets <- lapply(imputed_datasets, function(df) {
-    df[[y]][missing_y_indices] <- NA
-    return(df)
-  })
+  imputed_dataset[[y]][rep(missing_y_indices, times = length(unique(imputed_dataset$.imp)))] <- NA
 
-  return(deleted_datasets)
+  original_data$.imp <- 0
+  original_data$.id <- 1:nrow(original_data)
+  imputed_data_combined <- rbind(original_data, imputed_dataset)
+  mice_modified <- as.mids(imputed_data_combined)
+
+
+  return(mice_modified)
 }
