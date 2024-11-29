@@ -2,7 +2,7 @@ library(testthat)
 library(mice)
 library(dimp)
 
-test_that("dimp sets the originally missing 'Ozone' values to NA in all imputations", {
+test_that("dimp sets originally missing outcome values to NA in all imputations", {
 
   mice_obj <- mice(airquality, m = 5, maxit = 5, seed = 123)
 
