@@ -22,3 +22,12 @@ test_that("dimp sets originally missing outcome values to NA in all imputations"
   expect_true(all(imputed_missing_ozone == original_missing_ozone),
               info = "Test Failed")
 })
+
+test_that("dimp returns a valid mids object", {
+
+  mice_obj <- mice(airquality, m = 5, maxit = 5, seed = 123)
+
+  mice_obj_deleted <- dimp(mice_obj, "Ozone")
+
+  expect_s3_class(mice_obj_deleted, "mids")
+})
