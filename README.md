@@ -1,29 +1,18 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-options(tibble.print_min = 5, tibble.print_max = 5)
-```
-
 ## Overview
 
-`dimp` is a package that builds on the `mice` library, allowing users to delete imputed values in a specified outcome variable. It contains one primary function:
+`dimp` is a package that builds on the `mice` library, allowing users to
+delete imputed values in a specified outcome variable. It contains one
+primary function:
 
-* `dimp()`  modify and return a passed in `mids` object to delete imputed outcome values.
+- `dimp()` modify and return a passed in `mids` object to delete imputed
+  outcome values.
 
 ## Installation
 
-```{r, eval = FALSE}
+``` r
 # The easiest way to get dimp is to install the whole package via devtools:
 install.packages("devtools")
 libary(devtools)
@@ -32,7 +21,8 @@ library(dimp)
 ```
 
 ## Example
-```{r, eval = FALSE}
+
+``` r
 library(mice)
 library(dimp)
 
