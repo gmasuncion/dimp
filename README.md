@@ -15,7 +15,7 @@ primary function:
 ``` r
 # The easiest way to get dimp is to install the whole package via devtools:
 install.packages("devtools")
-libary(devtools)
+library(devtools)
 devtools::install_github("gmasuncion/dimp")
 library(dimp)
 ```
