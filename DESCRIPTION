@@ -4,8 +4,9 @@ Title: Multiple Imputation and Deletion
 Version: 0.1.0
 Author: Mark Asuncion, Luke Bai, Ting Lin, John Fei, Jason Dang
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: <TODO>
-    Use four spaces when indenting paragraphs within the Description.
+Description: 
+    Modifies a user's passed in `mids` object from the `mice` library, deleting any imputed outcomes
+    while allowing for imputation on all other variables.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

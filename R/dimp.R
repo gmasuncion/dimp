@@ -2,7 +2,7 @@
 #' @description This function performs multiple imputation (including the outcome variable) and deletes any imputed outcome values prior to analysis.
 #' @param mice_obj A `mids` object created using the `mice()` function.
 #' @param y The desired outcome variable.
-#' @return The imputed datasets with outcomes set back to NA, if they were initially missing.
+#' @return The same `mids` object but with outcomes set back to NA, if they were initially missing.
 #' @author Mark Asuncion, Ting Lin, John Fei, Luke Bai, Jason Dang
 #' @examples
 #' # Load in the mice library
