@@ -33,3 +33,8 @@ mice_obj <- mice(exampledata, m = 5, maxit = 5, seed = 123)
 # Deletion
 mice_obj_deleted <- dimp(mice_obj, "Ozone") # datasets in this object have missing outcomes
 ```
+## Credits
+This package was created by Mark Asuncion, Ting Lin, John Fei, Luke Bai and Jason Dang as part of the group project for CHL 8010 F2: Statistical Programming and Computation for
+Health Data offered by the Dalla Lana School of Public Health at the University of Toronto (Fall 2024).
+
+
