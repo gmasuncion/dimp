@@ -12,7 +12,7 @@ dimp(mice_obj, y)
 \item{y}{The desired outcome variable.}
 }
 \value{
-The imputed datasets with outcomes set back to NA, if they were initially missing.
+The same `mids` object but with outcomes set back to NA, if they were initially missing.
 }
 \description{
 This function performs multiple imputation (including the outcome variable) and deletes any imputed outcome values prior to analysis.
